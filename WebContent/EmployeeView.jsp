@@ -67,7 +67,7 @@ function callPopUpMethod(gender,dob){
 
 <div class="container">
 	<center>
-  		<a href="userupdate" class="btn btn-info" role="button">UpdateProfile</a>
+  		<a href="userupdate.jsp" class="btn btn-info" role="button">UpdateProfile</a>
  		<a href="Payslip.jsp" class="btn btn-info" role="button">DownloadPayslip</a>
   		<a href="CreateRequest.jsp" class="btn btn-info" role="button">CreateRequest</a>
   		<a href="ViewRequest.jsp" class="btn btn-info" role="button">ViewRequest</a>

@@ -710,7 +710,7 @@ public List<RequestBean> requestSearch(){
 		EmployeeBean employeeBean1=null;
 		List<EmployeeBean> listOfSearchEmployee = new ArrayList<>();
 	
-		String query="select FirstName , LastName , FatherName from employeebean where Firstname like ? or LastName like ? or FatherName like ?";
+		String query="select FirstName , LastName , FatherName, EmployeeId , EmailId , MobileNo from employeebean where Firstname like ? or LastName like ? or FatherName like ? or EmployeeId like ? or EmailId like ? or MobileNo like ?";
 			try
 			{
 				
@@ -718,6 +718,9 @@ public List<RequestBean> requestSearch(){
 				pstmt.setString(1,searchparam + "%");
 				pstmt.setString(2,searchparam + "%");
 				pstmt.setString(3,searchparam + "%");
+				pstmt.setString(4,searchparam + "%");
+				pstmt.setString(5,searchparam + "%");
+				pstmt.setString(6,searchparam + "%");
 				resultSet=pstmt.executeQuery();
 				while(resultSet.next())
 				{
@@ -726,6 +729,9 @@ public List<RequestBean> requestSearch(){
 					employeeBean1.setFirstName(resultSet.getString(1));
 					employeeBean1.setLastName(resultSet.getString(2));
 					employeeBean1.setFatherName(resultSet.getString(3));
+					employeeBean1.setEmployeeId(resultSet.getString(4));
+					employeeBean1.setEmailId(resultSet.getString(5));
+					employeeBean1.setMobileNumber(resultSet.getLong(6));
 					listOfSearchEmployee.add(employeeBean1);
 				}
 				System.out.println(listOfSearchEmployee.size());
@@ -734,6 +740,9 @@ public List<RequestBean> requestSearch(){
 		              System.out.println(eb1.getFirstName());
 		              System.out.println(eb1.getLastName());
 		              System.out.println(eb1.getFatherName());
+		              System.out.println(eb1.getEmployeeId());
+		              System.out.println(eb1.getEmailId());
+		              System.out.println(eb1.getMobileNumber());
 		          }
 				//listOfSearchEmployee.add(employeeBean1);
 			}

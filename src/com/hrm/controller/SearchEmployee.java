@@ -54,11 +54,15 @@ public class SearchEmployee extends HttpServlet {
 		
 		  List<EmployeeBean> employeeBean1= hrmService.employeeSearch(searchparam);
 		  System.out.println(employeeBean1.size());
-          for (int i=0; i<employeeBean1.size(); i++){
+          for (int i=0; i<=employeeBean1.size(); i++){
               EmployeeBean eb1= employeeBean1.get(i);
               System.out.println(eb1.getFirstName());
               System.out.println(eb1.getLastName());
-              System.out.println(eb1.getFatherName());
+              System.out.println(eb1.getFatherName()); 
+              System.out.println(eb1.getEmployeeId());
+              System.out.println(eb1.getEmailId());
+              System.out.println(eb1.getMobileNumber());
+            
           }
 		
 		  request.setAttribute("searchemployee", employeeBean1);

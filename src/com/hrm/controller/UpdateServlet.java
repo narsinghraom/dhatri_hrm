@@ -57,30 +57,30 @@ public class UpdateServlet extends HttpServlet {
 		String mobileNumber=request.getParameter("mobileNumber");
 		String alternateMobileNumber=request.getParameter("alternatemobileNumber");
 		String aadharNo=request.getParameter("Adharno");
-		String  panNumber=request.getParameter("panNo");
-		String passportNumber=request.getParameter("passportNo");
-		String permanentAddress=request.getParameter("PermanentAddress");
+		String  panNumber=request.getParameter("panNumber");
+		String passportNumber=request.getParameter("passportNumber");
+		String permanentAddress=request.getParameter("PermanentaAddress");
 		String localAddress=request.getParameter("LocalAdress");
 		String schoolName=request.getParameter("schoolName");
 		String tenthPassedOut=request.getParameter("tenthPassedOut");
 		String intermediateCollegeName=request.getParameter("intermediateCollegeName");
 		String interPassedOut=request.getParameter("interPassedOut");
-		String graduationDetails=request.getParameter("graduationDetails");
+		String graduationDetails=request.getParameter("graduationPassedOut");
 		String graduationPassedOut=request.getParameter("graduationPassedOut");
 		String branch=request.getParameter("branch");
 		String university=request.getParameter("university");
 		
 		String companyName=request.getParameter("companyName");
 		String role=request.getParameter("roleDetails");
-		String noticePeriod=request.getParameter("noticePeriod");
 		String location=request.getParameter("location");
 		String experience=request.getParameter("experience");
 		String currentCTC=request.getParameter("currentCTC");
 		String manager = request.getParameter("empmanager");
 		String bankName = request.getParameter("bankName");
-		String bankAccNo = request.getParameter("bankAccNo");
+		String bankAccNo = request.getParameter("bankAccno");
 		String ifscCode = request.getParameter("ifscCode");
         String expectedCTC=request.getParameter("expectedCTC");
+        String noticePeriod=request.getParameter("noticeperiod");
 		
 		// inject client reading values into Encapsulation object
 		

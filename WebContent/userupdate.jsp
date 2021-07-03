@@ -229,7 +229,7 @@ ul li:hover ul li {
 						<td>Alternate MobileNumber:*</td>
 						<td><input type="text" text-align:right; pattern="[0-9]{10}"
 							title="Alternate MobileNumber must be 10 digits" onkeypress="clearForm()"
-							name="Alternate MobileNumber" id="AlternateMobileNumber"
+							name="alternatemobileNumber" id="AlternateMobileNumber"
 							value=<%=bean.getAlternateMobileNumber()%>></td>
 						<td><p id="errorMsg3" style="color: red;"></p></td>
 					</tr>
@@ -315,7 +315,7 @@ ul li:hover ul li {
 					<tr>
 
 						<td>Graduation Details*:</td>
-						<td><input type="text" value=<%=bean.getGraduationDetails()%>
+						<td><input type="text" id="graduationDetails" name="graduationDetails" value=<%=bean.getGraduationDetails()%>
 							disabled="disabled"></td>
 						<td><p id="errorMsg14" style="color: red;"></p></td>
 
@@ -328,7 +328,7 @@ ul li:hover ul li {
 					</tr>
 					<tr>
 						<td>Branch*:</td>
-						<td><input type="text" value=<%=bean.getBranch()%>></td>
+						<td><input type="text" id="branch" name="branch" value=<%=bean.getBranch()%>></td>
 						<td><p id="errorMsg16" style="color: red;"></p></td>
 
 
@@ -359,7 +359,12 @@ ul li:hover ul li {
 							value=<%=bean.getRole()%>><br> <br></td>
 						<td><p id="errorMsg18" style="color: red;"></p></td>
 					</tr>
-					
+					<td>NoticePeriod:</td>
+						<td><input type=text id="noticeperiod"name="noticeperiod"
+							onkeypress="clearForm()" id="roleDetails"
+							value=<%=bean.getNoticePeriod()%>><br> <br></td>
+						<td><p id="errorMsg18" style="color: red;"></p></td>
+					</tr>
 						<tr>
 						<td>Location:</td>
 						<td><input type=text name="location" onkeypress="clearForm()"
@@ -377,14 +382,21 @@ ul li:hover ul li {
 
 					</tr>
 					<tr>
-						<td>Current CTC:</td>
+						<td>CurrentCTC:</td>
 						<td><input type=text name="currentCTC"
 							onkeypress="clearForm()" id="currentCTC"
 							value="<%=bean.getCurrentCTC()%>"><br> <br></td>
 						<td><p id="errorMsg23" style="color: red;"></p></td>
 
 					</tr>
+<tr>
+						<td>ExpectedCTC:</td>
+						<td><input type=text id="expectedCTC" name="expectedCTC"
+							onkeypress="clearForm()" id="currentCTC"
+							value="<%=bean.getExpectedCTC()%>"><br> <br></td>
+						<td><p id="errorMsg23" style="color: red;"></p></td>
 
+					</tr>
 					
 					<tr>
 						<td>Manager:</td>

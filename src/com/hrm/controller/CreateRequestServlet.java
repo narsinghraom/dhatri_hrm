@@ -20,65 +20,65 @@ import com.hrm.session.SharedObject;
 @WebServlet("/CreateRequestServlet")
 public class CreateRequestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CreateRequestServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+	public CreateRequestServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		Object objMail = SharedObject.getFromSession("LoginMailId");
 		String senderMailId = null;
-		if(objMail!=null){
-			senderMailId = (String)senderMailId;
-			String reasonName=request.getParameter("reason");
-			String textArea=request.getParameter("textArea");
-			String recieverMail=request.getParameter("email");
-			
+		if (objMail != null) {
+			senderMailId = (String) senderMailId;
+			String reasonName = request.getParameter("reason");
+			String textArea = request.getParameter("textArea");
+			String recieverMail = request.getParameter("emailTo");
+			String reasonId=request.getParameter("reasonId");
+
 			RequestBean requestBean = new RequestBean();
 			requestBean.setSenderMail(senderMailId);
 			requestBean.setReasonName(reasonName);
 			requestBean.setTextArea(textArea);
 			requestBean.setRecieverMail(recieverMail);
-			HRMService hrmService=new HRMServicesImplementation();
+			requestBean.setReasonId(reasonId);
+			HRMService hrmService = new HRMServicesImplementation();
 			int result = hrmService.insertRequestData(requestBean);
-			try{
-			    if(result>0)
-			    {
-			    	
-				    RequestDispatcher requestDisForward=request.getRequestDispatcher("SucessPage.jsp");
-				             requestDisForward.forward(request, response);
-			    }
-			    else
-			    {
-				    RequestDispatcher requestDisInclude=request.getRequestDispatcher("Employee.jsp");
-				             requestDisInclude.include(request, response);
-			    }
+			try {
+				if (result > 0) {
+
+					RequestDispatcher requestDisForward = request.getRequestDispatcher("SucessPage.jsp");
+					requestDisForward.forward(request, response);
+				} else {
+					RequestDispatcher requestDisInclude = request.getRequestDispatcher("Employee.jsp");
+					requestDisInclude.include(request, response);
+				}
 			}
-			
-			   catch(Exception e)
-			{
+
+			catch (Exception e) {
 				System.out.println(e);
 			}
-			
-			
-			
+
 		}
-		
+
 	}
 
 }

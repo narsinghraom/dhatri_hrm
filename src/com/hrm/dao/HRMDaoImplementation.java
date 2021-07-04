@@ -543,10 +543,10 @@ public int insertRequestData(RequestBean employeerequest){
 }
 
 public void setvaluestoptst(RequestBean employeerequest) throws SQLException {
-	pstmt.setString(1,employeerequest.getReasonId());
-	pstmt.setString(2,employeerequest.getReasonName());
-	pstmt.setString(5,employeerequest.getTextArea());
-	pstmt.setString(4,employeerequest.getSenderMail());
+	pstmt.setString(5,employeerequest.getReasonId());
+	pstmt.setString(4,employeerequest.getReasonName());
+	pstmt.setString(1,employeerequest.getTextArea());
+	pstmt.setString(2,employeerequest.getSenderMail());
 	pstmt.setString(3,employeerequest.getRecieverMail());
 }
 public List<RequestBean> ViewRequest(){

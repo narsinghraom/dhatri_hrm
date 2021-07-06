@@ -59,14 +59,14 @@
  		 <div class="dropdown-menu" >
     		<a class="dropdown-item " href="Employee.jsp"><h3>New Registration</h3></a><br>
     		<a class="dropdown-item " href="#"><h3>Response Approved</h3></a><br>
-    		<a class="dropdown-item " href="#"><h3>Search Employee</h3></a>
+    		<a class="dropdown-item " href="searchemployee.jsp"><h3>Search Employee</h3></a>
  		 </div>
 		</div>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Home</h3></a>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Update profile</h3></a>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Pay Slip</h3></a>
+		<a href="Home.jsp" class="col-md-2 btn btn-primary " ><h3>Home</h3></a>
+		<a href="userupdate.jsp" class="col-md-2 btn btn-primary " ><h3>Update profile</h3></a>
+		<a href="Payslip.jsp" class="col-md-2 btn btn-primary " ><h3>Pay Slip</h3></a>
 		<a href="CreateRequest.jsp" class="col-md-2 btn btn-primary " ><h3>Create request</h3></a>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Logout</h3></a>
+		<a href="adminlogin.jsp" class="col-md-2 btn btn-primary " ><h3>Logout</h3></a>
 		
 		
 	</div>

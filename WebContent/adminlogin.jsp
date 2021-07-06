@@ -41,7 +41,27 @@
 
 </head>
 <body style="background-color: Thistle;">
+	<h5>
+		<strong>
+			<%String errorMgs="";
+boolean Msg=false;
+Object obj1= SharedObject.getFromSession("result");
+if(null !=obj1){
+	Msg=(boolean)obj1;
+	if(!Msg){
+		Object obj= SharedObject.getFromSession(EmployeeConstants.ERROR_MSG_UI); 
+		if(null !=obj){
+			errorMgs=(String)obj;
+			out.print(errorMgs);	
+	}
+}
+	
+			
+			}
+			%>
+		</strong>
 
+	</h5>
 	<!-- <div class="container"> -->
 	<h1 align="center">AdminLogin</h1>
 
@@ -61,8 +81,7 @@
 				</label>
 				<div class="col-sm-2">
 					<input type="text" name="AdminId" class="form-control" id="AdminId"
-						onkeypress="doClearMyMsg()">
-						 <span id="adminid"
+						onkeypress="doClearMyMsg()"> <span id="adminid"
 						class="text-danger"></span>
 				</div>
 			</div>

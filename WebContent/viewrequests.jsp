@@ -19,7 +19,7 @@
 <body>
  <div class="container-fluid col-md-12" >
  
- <%@ include file="navbar.jsp" %> 
+<%-- <%@ include file="navbar.jsp" %> --%>
  </div>
  
 <div id="result" class="container">
@@ -72,7 +72,7 @@ for(RequestBean rs:std){
 
 <div class="container-fluid col-md-12" >
  
- <%@ include file="footer.jsp" %> 
+<%--<%@ include file="footer.jsp" %> --%>
  </div>
 <script src="jsFiles\jquery.min.js" type="text/javascript"></script>
 <script src="jsFiles\bootstrap.js" type="text/javascript"></script>

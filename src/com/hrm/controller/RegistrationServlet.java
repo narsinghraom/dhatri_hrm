@@ -17,6 +17,7 @@ import com.hrm.bean.EmployeeBean;
 import com.hrm.services.HRMService;
 import com.hrm.services.HRMServicesImplementation;
 import com.hrm.session.SharedObject;
+import com.sun.org.slf4j.internal.Logger;
 
 /**
  * Servlet implementation class RegistrationServlet
@@ -264,8 +265,7 @@ public class RegistrationServlet extends HttpServlet {
 	private void setMobileNumber(String mobileNumber, EmployeeBean employeebean) {
 		if (mobileNumber != null && !mobileNumber.isEmpty()) {
 			try {
-				System.out.println("testing");
-
+				//System.out.println("testing");
 				employeebean.setMobileNumber(Long.parseLong(mobileNumber));
 			}
 

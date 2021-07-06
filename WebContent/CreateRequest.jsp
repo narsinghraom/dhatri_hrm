@@ -23,6 +23,8 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	
+	<script type="text/javascript" src="dropDownAjax.js"></script>
+	
 <style>
 	body
 	{
@@ -47,6 +49,9 @@
 	background-color: rgba(28, 208, 214,0.6);
 	
 	}
+	#reason{
+	color:black;
+	}
 </style>
 </head>
 <body >
@@ -64,11 +69,11 @@
     		<a class="dropdown-item " href="#"><h3>Search Employee</h3></a>
  		 </div>
 		</div>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Home</h3></a>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Update profile</h3></a>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Pay Slip</h3></a>
+		<a href="AdminView.jsp" class="col-md-2 btn btn-primary " ><h3>Home</h3></a>
+		<a href="userupdate.jsp" class="col-md-2 btn btn-primary " ><h3>Update profile</h3></a>
+		<a href="Payslip.jsp" class="col-md-2 btn btn-primary " ><h3>Pay Slip</h3></a>
 		<a href="CreateRequest.jsp" class="col-md-2 btn btn-primary " ><h3>Create request</h3></a>
-		<a href="#" class="col-md-2 btn btn-primary " ><h3>Logout</h3></a>
+		<a href="adminlogin.jsp" class="col-md-2 btn btn-primary " ><h3>Logout</h3></a>
 	</div>
 	
 	
@@ -76,7 +81,7 @@
 	<div>
 	</div>
 	
-	<form action="/CreateRequest" method="post">
+	<form action="CreateRequestServlet" method="post">
 	<div  align="center"  class="container "  style= " background:rgba(); margin-top:150px; width:30%; padding:30px;">
 		<table style="color:white;">
 			<tr>
@@ -84,11 +89,12 @@
 				<td>	:-				</td>
 				<td>  <select class="form-control" id="emailTo" name="emailTo"
 						onchange="getManagerList(this.value)">
-						<option class="">Select manager</option>
-						<option value="Project Manager">ProjectManager</option>
-						<option value="HR Manager">HrManager</option>
-						<option value="Admin">Admin</option>
-					</select>  </td>
+							<option class="">Select manager</option>
+							<option value="Project Manager">ProjectManager</option>
+							<option value="HR Manager">HrManager</option>
+							<option value="Admin">Admin</option>
+					</select>
+					</td>
 			</tr>
 			
 			
@@ -119,7 +125,7 @@
 			<tr>
 			<td>    <label>Reason</label>  </td>
 			<td>		:-			</td>
-			<td>	<textarea color=black; type="text" name="reason" id="reason" onkeydown="reason(this.value)"></textarea>
+			<td>	<textarea type="text" name="reason" id="reason" onkeydown="reason(this.value)"></textarea>
 			</td>
 	
 		</table>

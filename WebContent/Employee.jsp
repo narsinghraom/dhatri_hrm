@@ -63,16 +63,16 @@ div {text-align: center;}
 		</div>
   		<ul class="navbar-nav ml-auto">
     		<li class="nav-item active">
-      			<a class="nav-link"  href="index.jsp"><strong>Home</strong></a>
+      			<a class="nav-link"  href="AdminView.jsp"><strong>Home</strong></a>
     		</li>
     		<li class="dropdown nav-item active" ><a class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#"><strong>Employee</strong> <span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="Employee.jsp">New Registration</a></li>
 					<li><a href="#">Response Approved</a></li>
-					<li><a href="EmployeeViewDirection.jsp">Search Employee</a></li>
+					<li><a href="searchemployee.jsp">Search Employee</a></li>
 				</ul>
 			</li>
-   			<li class="nav-item active"> <a class="nav-link" href="Login.jsp"><strong>Login</strong></a></li>
+   			<li class="nav-item active"> <a class="nav-link" href="Home.jsp"><strong>Login</strong></a></li>
     		<li class="nav-item active"><a class="nav-link" href="Aboutus.jsp"><strong>Aboutus</strong></a></li>
   		</ul>
   	

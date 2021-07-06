@@ -104,9 +104,11 @@ public class HRMServicesImplementation implements HRMService {
 		boolean flag=hrmDao.adminlogin(adminid, password);
 
 		if(flag){
+			SharedObject.putInToSession("result", flag);
 			SharedObject.putInToSession(EmployeeConstants.ADMINID, adminid);
 			}
 			else{
+				SharedObject.putInToSession("result", flag);
 				SharedObject.putInToSession(EmployeeConstants.ERROR_MSG_UI, "Invalid Credentials");
 			}
 

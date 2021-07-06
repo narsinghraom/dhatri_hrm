@@ -2,8 +2,7 @@ package com.hrm.dao.test;
 
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 import com.hrm.bean.EmployeeBean;
 import com.hrm.dao.HRMDao;
@@ -40,6 +39,7 @@ public class HRMDaoTest {
 		
 		int result= dao.insertEmployeeData(employeebean);
 		Assert.assertEquals(1, result);
+		
 		
 	}
 	
